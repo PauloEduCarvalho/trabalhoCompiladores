@@ -1,0 +1,8 @@
+fibonacci | int n | :
+se | n == 0 | faça: 
+retornar 0 
+senão se | n == 1 | faça: 
+retornar 1 
+senão faça: 
+int 3retornar fibonacci | n - 1 | + fibonacci | n - 2 |
+"string de teste"
