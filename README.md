@@ -1,2 +1,1 @@
-# trabalhoCompiladores
-Trabalho Pratico de Compiladores
+# Projeto pratico da disciplina Compiladores
