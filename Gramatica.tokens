@@ -1,0 +1,11 @@
+OpSom=1
+OpMul=2
+OpAtr=3
+Letra=4
+Digito=5
+AP=6
+FP=7
+WS=8
+'='=3
+'('=6
+')'=7
