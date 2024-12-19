@@ -1,0 +1,10 @@
+Gerar arquivo da gramática
+java -jar /home/plinux/Documentos/trabalhoCompiladores/antlr-4.13.1-complete.jar CPP.g4
+
+compilar todos os arquivos java
+javac -cp ".:/home/plinux/Documentos/trabalhoCompiladores/antlr-4.13.1-complete.jar" *.java
+
+rodando o exemplo com base no codigo.txt
+java -cp ".:/home/plinux/Documentos/trabalhoCompiladores/antlr-4.13.1-complete.jar" ExemploParser
+
+
