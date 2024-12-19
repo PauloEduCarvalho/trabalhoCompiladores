@@ -92,10 +92,14 @@ condicional
 enquanto
     : ENQUANTO PIPE condicao PIPE FAZER LCHAVE comando* RCHAVE ;
 
+// Operadores lógicos
+operadorLogico
+    : OU
+    | E ;    
+
 // Condições e expressões
 condicao
-    : expressao operadorComparacao expressao
-    | expressao ;
+    : expressao (operadorComparacao expressao | operadorLogico expressao)* ;
 
 // Expressões e termos
 expressao

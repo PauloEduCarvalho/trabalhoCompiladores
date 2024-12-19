@@ -87,6 +87,16 @@ public interface CPPListener extends ParseTreeListener {
 	 */
 	void exitEnquanto(CPPParser.EnquantoContext ctx);
 	/**
+	 * Enter a parse tree produced by {@link CPPParser#operadorLogico}.
+	 * @param ctx the parse tree
+	 */
+	void enterOperadorLogico(CPPParser.OperadorLogicoContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link CPPParser#operadorLogico}.
+	 * @param ctx the parse tree
+	 */
+	void exitOperadorLogico(CPPParser.OperadorLogicoContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link CPPParser#condicao}.
 	 * @param ctx the parse tree
 	 */

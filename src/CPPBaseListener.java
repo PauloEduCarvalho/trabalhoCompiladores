@@ -112,6 +112,18 @@ public class CPPBaseListener implements CPPListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterOperadorLogico(CPPParser.OperadorLogicoContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitOperadorLogico(CPPParser.OperadorLogicoContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterCondicao(CPPParser.CondicaoContext ctx) { }
 	/**
 	 * {@inheritDoc}
