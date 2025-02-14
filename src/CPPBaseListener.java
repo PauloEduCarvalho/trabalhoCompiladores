@@ -16,25 +16,25 @@ public class CPPBaseListener implements CPPListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterPrograma(CPPParser.ProgramaContext ctx) { }
+	@Override public void enterNInicio(CPPParser.NInicioContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitPrograma(CPPParser.ProgramaContext ctx) { }
+	@Override public void exitNInicio(CPPParser.NInicioContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterFuncao(CPPParser.FuncaoContext ctx) { }
+	@Override public void enterNPrincipal(CPPParser.NPrincipalContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitFuncao(CPPParser.FuncaoContext ctx) { }
+	@Override public void exitNPrincipal(CPPParser.NPrincipalContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -64,13 +64,25 @@ public class CPPBaseListener implements CPPListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterAtribuicao(CPPParser.AtribuicaoContext ctx) { }
+	@Override public void enterNAtribuicao(CPPParser.NAtribuicaoContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitAtribuicao(CPPParser.AtribuicaoContext ctx) { }
+	@Override public void exitNAtribuicao(CPPParser.NAtribuicaoContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterNCriacao(CPPParser.NCriacaoContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitNCriacao(CPPParser.NCriacaoContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -136,13 +148,13 @@ public class CPPBaseListener implements CPPListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterExpressao(CPPParser.ExpressaoContext ctx) { }
+	@Override public void enterNExpressao(CPPParser.NExpressaoContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitExpressao(CPPParser.ExpressaoContext ctx) { }
+	@Override public void exitNExpressao(CPPParser.NExpressaoContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -184,13 +196,13 @@ public class CPPBaseListener implements CPPListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterArgumentos(CPPParser.ArgumentosContext ctx) { }
+	@Override public void enterNArgumentos(CPPParser.NArgumentosContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitArgumentos(CPPParser.ArgumentosContext ctx) { }
+	@Override public void exitNArgumentos(CPPParser.NArgumentosContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *

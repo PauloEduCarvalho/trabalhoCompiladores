@@ -7,25 +7,29 @@ import org.antlr.v4.runtime.tree.ParseTreeListener;
  */
 public interface CPPListener extends ParseTreeListener {
 	/**
-	 * Enter a parse tree produced by {@link CPPParser#programa}.
+	 * Enter a parse tree produced by the {@code NInicio}
+	 * labeled alternative in {@link CPPParser#programa}.
 	 * @param ctx the parse tree
 	 */
-	void enterPrograma(CPPParser.ProgramaContext ctx);
+	void enterNInicio(CPPParser.NInicioContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link CPPParser#programa}.
+	 * Exit a parse tree produced by the {@code NInicio}
+	 * labeled alternative in {@link CPPParser#programa}.
 	 * @param ctx the parse tree
 	 */
-	void exitPrograma(CPPParser.ProgramaContext ctx);
+	void exitNInicio(CPPParser.NInicioContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link CPPParser#funcao}.
+	 * Enter a parse tree produced by the {@code NPrincipal}
+	 * labeled alternative in {@link CPPParser#funcao}.
 	 * @param ctx the parse tree
 	 */
-	void enterFuncao(CPPParser.FuncaoContext ctx);
+	void enterNPrincipal(CPPParser.NPrincipalContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link CPPParser#funcao}.
+	 * Exit a parse tree produced by the {@code NPrincipal}
+	 * labeled alternative in {@link CPPParser#funcao}.
 	 * @param ctx the parse tree
 	 */
-	void exitFuncao(CPPParser.FuncaoContext ctx);
+	void exitNPrincipal(CPPParser.NPrincipalContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link CPPParser#parametros}.
 	 * @param ctx the parse tree
@@ -47,15 +51,29 @@ public interface CPPListener extends ParseTreeListener {
 	 */
 	void exitComando(CPPParser.ComandoContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link CPPParser#atribuicao}.
+	 * Enter a parse tree produced by the {@code NAtribuicao}
+	 * labeled alternative in {@link CPPParser#atribuicao}.
 	 * @param ctx the parse tree
 	 */
-	void enterAtribuicao(CPPParser.AtribuicaoContext ctx);
+	void enterNAtribuicao(CPPParser.NAtribuicaoContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link CPPParser#atribuicao}.
+	 * Exit a parse tree produced by the {@code NAtribuicao}
+	 * labeled alternative in {@link CPPParser#atribuicao}.
 	 * @param ctx the parse tree
 	 */
-	void exitAtribuicao(CPPParser.AtribuicaoContext ctx);
+	void exitNAtribuicao(CPPParser.NAtribuicaoContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code NCriacao}
+	 * labeled alternative in {@link CPPParser#criacao}.
+	 * @param ctx the parse tree
+	 */
+	void enterNCriacao(CPPParser.NCriacaoContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code NCriacao}
+	 * labeled alternative in {@link CPPParser#criacao}.
+	 * @param ctx the parse tree
+	 */
+	void exitNCriacao(CPPParser.NCriacaoContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link CPPParser#retorno}.
 	 * @param ctx the parse tree
@@ -107,15 +125,17 @@ public interface CPPListener extends ParseTreeListener {
 	 */
 	void exitCondicao(CPPParser.CondicaoContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link CPPParser#expressao}.
+	 * Enter a parse tree produced by the {@code NExpressao}
+	 * labeled alternative in {@link CPPParser#expressao}.
 	 * @param ctx the parse tree
 	 */
-	void enterExpressao(CPPParser.ExpressaoContext ctx);
+	void enterNExpressao(CPPParser.NExpressaoContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link CPPParser#expressao}.
+	 * Exit a parse tree produced by the {@code NExpressao}
+	 * labeled alternative in {@link CPPParser#expressao}.
 	 * @param ctx the parse tree
 	 */
-	void exitExpressao(CPPParser.ExpressaoContext ctx);
+	void exitNExpressao(CPPParser.NExpressaoContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link CPPParser#termo}.
 	 * @param ctx the parse tree
@@ -147,15 +167,17 @@ public interface CPPListener extends ParseTreeListener {
 	 */
 	void exitChamadaFuncao(CPPParser.ChamadaFuncaoContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link CPPParser#argumentos}.
+	 * Enter a parse tree produced by the {@code NArgumentos}
+	 * labeled alternative in {@link CPPParser#argumentos}.
 	 * @param ctx the parse tree
 	 */
-	void enterArgumentos(CPPParser.ArgumentosContext ctx);
+	void enterNArgumentos(CPPParser.NArgumentosContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link CPPParser#argumentos}.
+	 * Exit a parse tree produced by the {@code NArgumentos}
+	 * labeled alternative in {@link CPPParser#argumentos}.
 	 * @param ctx the parse tree
 	 */
-	void exitArgumentos(CPPParser.ArgumentosContext ctx);
+	void exitNArgumentos(CPPParser.NArgumentosContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link CPPParser#tipo}.
 	 * @param ctx the parse tree

@@ -55,11 +55,11 @@ WS          : [ \t\r\n]+ -> skip;
 
 // Programa principal
 programa
-    : funcao+ ;
+    : funcao+ EOF #NInicio;
 
 // Definição de função
 funcao
-    : ID PIPE parametros PIPE LCHAVE comando* RCHAVE ;
+    : ID PIPE parametros PIPE LCHAVE comando* RCHAVE #NPrincipal;
 
 // Parâmetros de função
 parametros
@@ -72,23 +72,27 @@ comando
     | enquanto
     | retorno
     | chamadaFuncao PONTO_VIRGULA
-    | expressao PONTO_VIRGULA ;
+    | expressao PONTO_VIRGULA
+    | criacao ;
 
 // Comando de atribuição
 atribuicao
-    : ID OP_ATR expressao PONTO_VIRGULA ;
+    : ID OP_ATR expressao PONTO_VIRGULA #NAtribuicao;
+
+criacao
+    : TIPO ID OP_ATR fator PONTO_VIRGULA #NCriacao;
 
 // Comando de retorno
 retorno
     : RETORNAR expressao PONTO_VIRGULA ;
 
-// Estruturas de controle
+// Estruturas de controle (agora "faça" é obrigatório!)
 condicional
-    : SE PIPE condicao PIPE FAZER LCHAVE comando* RCHAVE SENAO?
-      (SENAO FAZER LCHAVE comando* RCHAVE
-      | SENAO SE PIPE condicao PIPE FAZER LCHAVE comando* RCHAVE)? ;
+    : SE PIPE condicao PIPE FAZER LCHAVE comando* RCHAVE 
+      (SENAO SE PIPE condicao PIPE FAZER LCHAVE comando* RCHAVE)* 
+      (SENAO FAZER LCHAVE comando* RCHAVE)? ;
 
-// Estrutura de repetição
+// Estrutura de repetição (também exige "faça")
 enquanto
     : ENQUANTO PIPE condicao PIPE FAZER LCHAVE comando* RCHAVE ;
 
@@ -103,7 +107,7 @@ condicao
 
 // Expressões e termos
 expressao
-    : termo ((OP_ARIT) termo)* ;
+    : termo ((OP_ARIT) termo)* #NExpressao;
 
 termo
     : fator ((OP_ARIT) fator)* ;
@@ -123,7 +127,7 @@ chamadaFuncao
 
 // Argumentos de funções
 argumentos
-    : expressao (VIRGULA expressao)* | ;
+    : expressao (VIRGULA expressao)* #NArgumentos;
 
 // Tipos e operadores
 tipo

@@ -1,7 +1,7 @@
 import org.antlr.v4.runtime.*;
 import org.antlr.v4.runtime.tree.ParseTree;
 import java.io.IOException;
-import java.util.Arrays;
+import java.util.List;
 
 public class ExemploParser {
 
@@ -34,6 +34,7 @@ public class ExemploParser {
                 tree = parser.programa();
             } catch (RecognitionException e) {
                 System.err.println("Erro de análise sintática: " + e.getMessage());
+                return; // Se houver erro sintático, encerra o programa
             }
 
             // Exibe os tokens (análise léxica)
@@ -49,7 +50,11 @@ public class ExemploParser {
                 System.out.println(tree.toStringTree(parser)); // Representação textual da árvore
             } else {
                 System.out.println("\nErro: Árvore Sintática não gerada devido a erros.");
+                return; // Se a árvore não for gerada, encerra o programa
             }
+
+
+
 
         } catch (IOException e) {
             System.err.println("Erro ao ler o arquivo: " + e.getMessage());
@@ -57,7 +62,7 @@ public class ExemploParser {
     }
 
     /**
-     * Listener personalizado para erros.
+     * Listener personalizado para erros léxicos e sintáticos.
      */
     static class ErrorListener extends BaseErrorListener {
         private final String source;

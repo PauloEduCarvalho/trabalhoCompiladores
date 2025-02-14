@@ -1,9 +1,8 @@
-fibonacci | int  | {
+fibonacci | int n | { 
    se | n == 0 | faça {
-      retornar 0;
+      retornar x;
    } senão se | n == 1 | faça { 
       retornar 1;
-   } faça { 
-      retornar fibonacci | n - 1 | + fibonacci | n - 2 |;
    }
-}
+   retornar fibonacci | n - 1 | + fibonacci | n - 2 |;
+}  

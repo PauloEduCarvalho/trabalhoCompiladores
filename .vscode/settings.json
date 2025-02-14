@@ -1,0 +1,9 @@
+{
+   "java.project.sourcePaths": [
+      ".",
+      "src"
+   ],
+   "java.project.referencedLibraries": [
+      "/home/plinux/Documentos/trabalhoCompiladores/libs/antlr-4.13.1-complete.jar"
+   ]
+}
